@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CPAN 226 - IoT Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="align-items-center justify-content-center">
+      <div class="text-center m-4">
+        <h1 class="fw-bold">CPAN 226</h1>
+        <h2 class="fw-bold text-body-secondary">IoT Smart Gateway Dashboard</h2>
+      </div>
+      <div class="container my-2 py-2">
+        <div class="row g-3" id="devices"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
