@@ -12,7 +12,7 @@ isolated = set()  # to store isolated devices
 
 """ 
     Using a public broker to establish publish-subsribe relationship and handle data 
-    > used mqttprojects but this was old and not reliable anymore
+    > used eclipseprojects but this was old and not reliable anymore
     > used broker.hivemq.com but was slow
 
     > used mosquitto instead since it's much more compatible and faster
@@ -27,7 +27,6 @@ mqttbroker = "test.mosquitto.org"
 def on_connect(client, userdata, flags, rc, properties=None):
     if rc != 0:
         print(f"{rc}: Failed to connect to MQTT Broker")
-        client.disconnect()
     else:
         print(f"{rc}: Connected to MQTT Broker")
         client.subscribe("TEMPERATURE/#")
